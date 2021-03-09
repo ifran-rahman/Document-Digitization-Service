@@ -1,0 +1,34 @@
+Functional Requirements:
+1.	Create Folders.
+2.	Upload files.
+3.	View files.
+4.	Lock/Unlock files.
+5.	Upload an index file in CSV format and automatically link the attributes in designatcd file names without any limit.
+6.	Index each record.
+7.	Route records to one or more user accounts.
+8.	Create user account with specific role.
+9.	Reset password.
+10.	Upload avatar.
+11.	Create group.
+12.	Login with Google account.
+13.	Search data.
+14.	Search ocr of scanned document.
+15.	Search with filter.
+16.	View real-time notification in dashboard.
+
+Non-Functional Requirements:
+1.	Effective.
+2.	Cost efficient.
+3.	Technologically advanced.
+4.	User friendly and organized.
+5.	Secure.
+6.	Must be able to deal with high volume of data.
+Constraints:
+1.	Accounts with 3 failed login attempts should block.
+2.	Idle time off 15 minutes should automatically log out.
+3.	Include 3 index per document.
+4.	Minimum Resolution is 200dpi.
+5.	Capable of scan and upload 36,00,000(extimated) pages documents.
+
+
+
