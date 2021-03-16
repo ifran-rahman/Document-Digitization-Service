@@ -1,0 +1,65 @@
+Functional Requirements:
+1.	Create Folders.
+a.	The system should have no limit in creation of folders and sub folders.
+b.	The system should have a public repository where users can only view the uploaded/created record in assigned public folder.
+c.	The system should have a private repository where only permitted users and groups are allowed to view and edit a record.
+2.	Upload files.
+a.	Field for upload and expiry date for archiving purposes.
+b.	Automatic archive feature.
+3.	View files.
+4.	Lock/Unlock files.
+a.	Give view access.
+b.	Give edit access.
+c.	Assign user to specific folder or files.
+d.	Assign groups to specific folder or files.
+5.	Upload an index file in CSV format and automatically link the attributes in designatcd file names without any limit.
+a.	Automatically index each record using the CSV file.
+b.	No limit in index field.
+6.	Route records to one or more user accounts.
+7.	View previous uploaded documents.
+8.	Create user account with specific role.
+a.	System should be capable to create unlimited number of accounts.
+b.	Only alpha and numeric keys are allowed in username and password field.
+c.	
+9.	Reset password.
+a.	Notify the administrator through email for new request for change password.
+10.	Upload avatar.
+11.	Create group.
+12.	Login with Google account.
+13.	Search data.
+a.	Search as index, file name, date, author name, uploader name, document type and content of the scanned document
+14.	Search OCR of scanned document.
+15.	Search with filter.
+16.	Send email notification in every routed task.
+17.	View real-time notification in dashboard.
+
+
+
+Non-Functional Requirements:
+1.	Effective.
+2.	Cost efficient.
+3.	Technologically advanced.
+4.	User friendly and organized.
+5.	Secure.
+6.	Must be able to deal with high volume of data.
+Constraints:
+1.	Accounts with 3 failed login attempts should block.
+2.	Idle time off 15 minutes should automatically log out.
+3.	Include 3 index per document.
+4.	Minimum Resolution is 200dpi.
+5.	Capable of scan and upload 36,00,000(extimated) pages documents.
+
+User Interface:
+The system should have a dashboard for private and public folders, uploaded documents and notifications
+
+Things I don’t know where to put:
+Reports Management 2.2.5.7 
+The system should be capable to count all the uploaded records by . folder or user.
+The system should be capable to count all the pages in every record uploaded.
+Digitized document can be linked into the records on File Server.
+Must provide a backup and recovery mechanism for the digitized documents.
+ Scanned images will be saved using industry standards, such as, TIFF, G4,PDF/A, searchable PDF or a like.
+
+
+
+
