@@ -1,5 +1,5 @@
 Functional Requirements:
-1.	Create Folders.
+1.	Create Folders. [admin][employee]
 a.	The system should have no limit in creation of folders and sub folders.
 b.	The system should have a public repository where users can only view the uploaded/created record in assigned public folder.
 c.	The system should have a private repository where only permitted users and groups are allowed to view and edit a record.
