@@ -103,7 +103,7 @@
     <br>
     <br>
     <br>
-  
+
 
     <a name="Introduction"></a>
     <h1><b>1. Introduction</b></h1>
@@ -177,28 +177,8 @@
       the expiry date, the system will automatically archive the files.</p>
     <br>
 
-    <p>i. Product Perspective</p>
-    <p>The application will be a web based document digitization service. Employees will upload scanned documents through the web interface or the android application.. To access the files the user must log in to a web application on his/her computer
-      using a web browser. In order to access any of these features the user must create an account and login to that account. Employees will also be allowed to login via google login. Accounts being created must be verified by the admin. Admins are
-      the super Employees of the system, they can assign roles and create groups for Employees and folders.
-
-      A user can upload files and keep them in folders. Folders can be public and private. Contents belonging in public folders will be available for everyone on the system. Employees can search for a file using keyword searches or OCR.Upon reaching
-      the expiry date, the system will automatically archive the files.
-    </p>
-
     <a name="Product Functions"></a>
     <h3>ii. Product Functions</h3>
-
-    <p>i. Product Perspective</p>
-    <p>The application will be a web based document digitization service. Employees will upload scanned documents through the web interface or the android application.. To access the files the user must log in to a web application on his/her computer
-      using a web browser. In order to access any of these features the user must create an account and login to that account. Employees will also be allowed to login via google login. Accounts being created must be verified by the admin. Admins are
-      the super Employees of the system, they can assign roles and create groups for Employees and folders.
-
-      A user can upload files and keep them in folders. Folders can be public and private. Contents belonging in public folders will be available for everyone on the system. Employees can search for a file using keyword searches or OCR.Upon reaching
-      the expiry date, the system will automatically archive the files.
-    </p>
-    <a name="Product Functions"></a>
-    <p>ii. Product Functions</p>
 
     <ul>
       <li>Registration through a web portal.</li>
@@ -208,7 +188,6 @@
       <li>Automated file archiving.</li>
       <li>File search by keyword/OCR.</li>
       <li>Creating public/private folders.</li>
-
       <li>Assigning folders to groups by system administrator.</li>
     </ul>
     <br>
@@ -227,50 +206,47 @@
     <p>The entire system is going to exist on a web application and there will also be an android application. To access the application user must ensure that he/she has access to a computer or mobile device and that internet access. </p>
     <br>
 
-    <li>Assigning folders to groups by system administrator. </li>
-    </ul>
-    <a name="User Classes and Characteristics"></a>
-    <p>iii. User Classes and Characteristics</p>
-    <p>Employee- A user who is employed by the organization and holds a title below executive or head of department. Can upload and search for files in all public folders. Can only access files from private folders that they are given passwords to.
-      This user can also create public and private folders.
-
-      System Administrator - A user who the organizer promotes to oversee every operation in the system. This user can view every file in all public and private folders. This user can also assign other employees to particular groups and give them
-      access to specific folders. A system administrator is also responsible to confirm authentication on new users to the system.
-    </p>
-    <a name="Operating Environment"></a>
-    <p>iv. Operating Environment</p>
-    <p>The entire system is going to exist on a web application and there will also be an android application. To access the application user must ensure that he/she has access to a computer or mobile device and that internet access. </p>
-
     <a name="Design and Implementation Constraints"></a>
-    <p>v. Design and Implementation Constraints</p>
-
+    <h3>v. Design and Implementation Constraints</h3>
+    <ol>
+      <li>Accounts with 3 failed login attempts should block.</li>
+      <li>Idle time off 15 minutes should automatically log out.</li>
+      <li>Include 3 indexes per document.</li>
+      <li>Minimum Resolution is 200dpi.</li>
+      <li>Capable of scanning and uploading 36,00,000(estimated) pages documents.</li>
+      <li>Only alpha and numeric keys are allowed in the username and password field.</li>
+      <li>Scanned images will be saved using industry standards, such as, TIFF, G4,PDF/A, searchable PDF or a like.</li>
+    </ol>
 
 
     <a name="User Documentation"></a>
-    <p>vi. User Documentation</p>
+    <h3>vi. User Documentation</h3>
+    <table>
+      <tr>
+        <td>Django </td>
+        <td><a href="https://docs.djangoproject.com/en/3.1/" target=blank>https://docs.djangoproject.com/en/3.1/</a> </td>
+
+      </tr>
+      <tr>
+        <td>Android</td>
+        <td><a href="https://developer.android.com/" target=blank>https://developer.android.com/</a> </td>
+      </tr>
+      <tr>
+        <td>Firebase</td>
+        <td><a href="https://firebase.google.com/docs" target=blank>https://firebase.google.com/docs</a> </td>
+      </tr>
+      <tr>
+        <td>HTML & CSS</td>
+        <td><a href="https://www.w3schools.com/html/html_css.asp" target=blank>https://www.w3schools.com/html/html_css.asp</a></td>
+      </tr>
+    </table>
     <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+
     <a name="Assumptions and Dependencies"></a>
 
     <h3>vii. Assumptions and Dependencies</h3>
     <p>We are assuming that all users will have access to a computer device or mobile phone to use the system.</p>
     <br>
-
-    <p>vii. Assumptions and Dependencies</p>
-    <p>We are assuming that all users will have access to a computer device or mobile phone to use the system.</p>
-
-    <p>vii. Assumptions and Dependencies</p>
-    <p>We are assuming that all users will have access to a computer device or mobile phone to use the system.</p>
 
 
     <a name="External Interface Requirements"></a>
@@ -293,20 +269,6 @@
     <h3>iii. Software Interfaces</h3>
     <p>For the web application part we’ll be using basic HTML, CSS and JavaScript. For the mobile version on the app, we’ll be using android</p>
     <br>
-
-
-    <p>i. User Interfaces</p>
-    <p>Users will be greeted by a sign-in page where he/she can either sign-in or create a new account. If the user successfully enters the login credentials he/she will be taken to the user dashboard. If the user is new then they must create a new
-      account and then login if the system administrator grants the access.
-      Once signed in, the user is greeted to a dashboard. The dashboard will help navigate the user throughout the entire system where they can add,store and view files in different folders both public and private. </p>
-    <a name="Hardware Interfaces"></a>
-    <p>ii. Hardware Interfaces</p>
-    <p>For the hardware interfaces, as the system is being developed as a web application and mobile application there are no restrictions to access the web application but the mobile application is only being developed for the Android OS.
-      It is also expected that the user will have a general idea on how to use the mobile device camera as the mobile app will use it to scan documents.
-    </p>
-    <a name="Software Interfaces"></a>
-    <p>iii. Software Interfaces</p>
-    <p>For the web application part we’ll be using basic HTML, CSS and JavaScript. For the mobile version on the app, we’ll be using android.</p>
 
     <a name="Communications Interfaces"></a>
     <h3>iv. Communications Interfaces</h3>
@@ -359,39 +321,38 @@
         </ol>
       </li>
 
-      <li> Route records to one or more user accounts.
-        <p>Actor: Admin</p>
-        <ol>
-          <li>View dashboard.</li>
-          <li>Upload document.</li>
-          <li>View folders.
-            <ol type="a">
-              <li> Admin can view every files and folders in the system.</li>
-            </ol>
-          </li>
-
-          <li> View repository.
-            <ol type="a">
-              <li> Admin can view both public repository as well as private repository of everyone.</li>
-            </ol>
-          </li>
-
-          <li>View notifications.
-
-            <p>Actor: System</p>
-            <ol>
-              <li> Archiving
-                <ol type="a">
-                  <li>System automatically archives files upon expiry date.</li>
-                </ol>
-              </li>
-
-              <li> Capture specific index in uploaded CSV document and automatically fill up the designated fields.</li>
-            </ol>
-          </li>
+      <li> Route records to one or more user accounts.</li>
+    </ol>
+    <p>Actor: Admin</p>
+    <ol>
+      <li>View dashboard.</li>
+      <li>Upload document.</li>
+      <li>View folders.
+        <ol type="a">
+          <li> Admin can view every files and folders in the system.</li>
         </ol>
       </li>
+
+      <li> View repository.
+        <ol type="a">
+          <li> Admin can view both public repository as well as private repository of everyone.</li>
+        </ol>
+      </li>
+
+      <li>View notifications.</li>
     </ol>
+    <p>Actor: System</p>
+    <ol>
+      <li> Archiving
+        <ol type="a">
+          <li>System automatically archives files upon expiry date.</li>
+        </ol>
+      </li>
+
+      <li> Capture specific index in uploaded CSV document and automatically fill up the designated fields.</li>
+    </ol>
+    </li>
+
 
     <br>
 
@@ -430,24 +391,24 @@
       </li>
 
       <li>Scan document</li>
+    </ol>
+    <p>Actor:Admin</p>
 
-      <p>Actor:Admin</p>
+    <ol>
+      <li> Can use search option.
+        <ol type="a">
+          <li>OCR.</li>
+          <li>Filtering.</li>
+        </ol>
+      </li>
+    </ol>
 
-      <ol>
-        <li> Can use search option.
-          <ol type="a">
-            <li>OCR.</li>
-            <li>Filtering.</li>
-          </ol>
-        </li>
-      </ol>
-
-      <p>Actor: System</p>
-
+    <p>Actor: System</p>
+    <ol>
       <li>Retrieve text from scanned documents.</li>
       <li>Store retrieved texts in the database.</li>
-
     </ol>
+
 
 
 
