@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<title>Software Design Specification</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<body>
+
+
+  <div class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-white" style="display:none" id="mySidebar">
+    <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
+
+    <h4><a class="w3-bar-item active" href="#Software Design Specification">Software Design Specification</a></h4>
+    <h3 class="w3-bar-item">Table of Contents</h3>
+    <ul>
+      <li><a href="#Introduction" class="w3-bar-item w3-button">Introduction</a>
+      <li><a href="#Document Conventions" class="w3-bar-item w3-button ">Document Conventions</a>
+      <li><a href="#Description of Design Components" class="w3-bar-item w3-button">Description of Design Components</a>
+      <li><a href="#High-Level Component Design" class="w3-bar-item w3-button">Class diagrams</a>
+      <li><a href="#Sequence Diagrams" class="w3-bar-item w3-button">Sequence Diagrams</a>
+      <li><a href="#Database Design" class="w3-bar-item w3-button ">Database Design</a>
+      <li><a href="#Implementation plan" class="w3-bar-item w3-button">Implementation plan</a></li>
+    </ul>
+  </div>
+
+  <!-- Page Content -->
+  <div id="main">
+
+    <div class="w3-blue">
+      <button id="openNav" class="w3-button w3-blue w3-xlarge" onclick="w3_open()">&#9776;</button>
+      <div class="w3-container">
+        <a name="Software Design Specification"></a>
+        <h1>Software Design Specification</h1>
+      </div>
+    </div>
+
+    <div class="w3-container">
+      <a name="Introduction"></a>
+      <h1>Introduction:</h1>
+      <p>This document will provide a basic guideline to help develop a document storage system as
+        per the requirements stated by PERL International. The document contains different sections
+        to describe the overall working procedure to be maintained throughout the course of
+        development. Section 2 will start with describing the document conventions while section
+        3.1 and 3.2 will discuss about the design components and a high-level component design.
+        Section 4.1 amd 4.2 contains class diagrams and sequence diagram that are going to be used
+        to develop the project and section 5 will contain the database design followed by section 6
+        which will contain the implementation plan.</p>
+    </div>
+
+
+    <div class="w3-container">
+      <a name="Document Conventions"></a>
+      <h1>Document Conventions:</h1>
+      <p>For the Class Diagrams, Sequence Diagrams and ER diagrams, seperate legends will be
+        provided in the respective sections. Other than that, this document uses the following
+        conventions:
+
+        Emphasized word - word,
+        Quoted Text- "qoute".</p>
+    </div>
+
+    <div class="w3-container">
+      <a name="Description of Design Components"></a>
+      <h1>Description of Design Components:</h1>
+      <table>
+        <tr>
+          <td>Django </td>
+          <td><a href="https://docs.djangoproject.com/en/3.1/" target=blank>https://docs.djangoproject.com/en/3.1/</a> </td>
+
+        </tr>
+        <tr>
+          <td>Android</td>
+          <td><a href="https://developer.android.com/" target=blank>https://developer.android.com/</a> </td>
+        </tr>
+        <tr>
+          <td>Firebase</td>
+          <td><a href="https://firebase.google.com/docs" target=blank>https://firebase.google.com/docs</a> </td>
+        </tr>
+        <tr>
+          <td>HTML & CSS</td>
+          <td><a href="https://www.w3schools.com/html/html_css.asp" target=blank>https://www.w3schools.com/html/html_css.asp</a></td>
+        </tr>
+      </table>
+
+    </div>
+
+    <div class="w3-container">
+      <a name="Class diagrams"></a>
+      <h1>Class diagrams:</h1>
+    </div>
+
+    <div class="w3-container">
+      <a name="Sequence Diagrams"></a>
+      <h1>Sequence Diagrams:</h1>
+    </div>
+
+    <div class="w3-container">
+      <a name="Database Design"></a>
+      <h1>Database Design:</h1>
+      
+    </div>
+
+
+    <div class="w3-container">
+      <a name="Implementation plan"></a>
+      <h1>Implementation plan:</h1>
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+  <script>
+    function w3_open() {
+      document.getElementById("main").style.marginLeft = "25%";
+      document.getElementById("mySidebar").style.width = "25%";
+      document.getElementById("mySidebar").style.display = "block";
+      document.getElementById("openNav").style.display = 'none';
+    }
+
+    function w3_close() {
+      document.getElementById("main").style.marginLeft = "0%";
+      document.getElementById("mySidebar").style.display = "none";
+      document.getElementById("openNav").style.display = "inline-block";
+    }
+  </script>
+</body>
+
+</html>
