@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/tools"
+    app:ignore="NamespaceTypo"
+    android:id="@+id/parent_layout"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardBackgroundColor="@android:color/white"
+        card_view:cardCornerRadius="20dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        card_view:cardElevation="0dp"
+        card_view:contentPadding="7dp"
+        >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="80sp"
+                android:layout_height="80sp"
+                android:layout_alignParentStart="true"
+                android:src="@mipmap/ic_launcher"
+                android:id="@+id/image"
+                />
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/image"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="20sp"
+                android:text="Canada"
+                android:textColor="#000"
+                android:textFontWeight="100"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/userrole"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="125sp"
+                android:layout_marginTop="50sp"
+                android:text="Canada"
+                android:textColor="#000"
+                android:textFontWeight="100"
+                android:textSize="10sp" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>
