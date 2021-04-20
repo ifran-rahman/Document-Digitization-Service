@@ -1,9 +1,11 @@
 package com.example.documentdigitizationservice;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -28,8 +30,16 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view =  inflater.inflate(R.layout.fragment_home, container, false);
+        Button button = (Button) view.findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(getActivity(), Profile.class);
+                startActivity(in);
+            }
+        });
 
-        mImageUrls.add("https://scontent.fzyl1-1.fna.fbcdn.net/v/t1.6435-9/158900688_2019518771524579_9061371679276739948_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=174925&_nc_ohc=SLG-4hOx6-8AX_hE9a7&_nc_ht=scontent.fzyl1-1.fna&oh=4c5948625d929be61edf1bb95a055904&oe=60A02D13");
+        mImageUrls.add("https://www.google.com/url?sa=i&url=https%3A%2F%2Ftimesofindia.indiatimes.com%2Fentertainment%2Fbengali%2Fmovies%2Fnews%2Fshakib-khan-is-controversys-favourite-child%2Farticleshow%2F59309731.cms&psig=AOvVaw1wLoe0XTveBhAte6JwtgM9&ust=1619026822309000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKixoIavjfACFQAAAAAdAAAAABAD");
         mUserNames.add("Anan Ghosh");
         mUserRoles.add("Developer");
         mImageUrls.add("https://scontent.fzyl1-1.fna.fbcdn.net/v/t1.6435-9/43322618_486658725170587_5381512967265189888_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=174925&_nc_ohc=DMd56GrqcHgAX_BSJT_&_nc_ht=scontent.fzyl1-1.fna&oh=98f608adca6118c98551683ba9a47c43&oe=609F54E7");
