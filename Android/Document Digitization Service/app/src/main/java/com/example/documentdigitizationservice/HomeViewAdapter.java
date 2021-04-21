@@ -30,11 +30,11 @@ public class HomeViewAdapter extends RecyclerView.Adapter<HomeViewAdapter.ViewHo
     private ArrayList<String> mUserRoles = new ArrayList<>();
     private Context mContext;
 
-    public HomeViewAdapter(ArrayList<String> mImages, ArrayList<String> mImagenames, ArrayList<String> mUserRoles) {
+    public HomeViewAdapter(ArrayList<String> mImages, ArrayList<String> mUserNames, ArrayList<String> mUserRoles, Context mContext) {
         this.mImages = mImages;
-        this.mUserNames = mImagenames;
+        this.mUserNames = mUserNames;
         this.mUserRoles = mUserRoles;
-
+        this.mContext = mContext;
     }
 
     @NonNull
@@ -46,9 +46,9 @@ public class HomeViewAdapter extends RecyclerView.Adapter<HomeViewAdapter.ViewHo
     }
 
     @Override
-    public void onBindViewHolder(@NonNull final ViewHolder viewHolder, final int position) {
+    public void onBindViewHolder(@NonNull ViewHolder viewHolder, final int position) {
 
-        Glide.with( viewHolder.image.getContext())
+        Glide.with(mContext)
                 .asBitmap()
                 .load(mImages.get(position))
                 .into(viewHolder.image);
@@ -62,7 +62,7 @@ public class HomeViewAdapter extends RecyclerView.Adapter<HomeViewAdapter.ViewHo
             @Override
             public void onClick(View v) {
                 Log.d(TAG, "onClick: clicked on: " + mUserNames.get(position));
-
+                Toast.makeText(mContext, mUserNames.get(position), Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -80,10 +80,10 @@ public class HomeViewAdapter extends RecyclerView.Adapter<HomeViewAdapter.ViewHo
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            image = itemView.findViewById(R.id.image);
+            image = itemView.findViewById(R.id.HomeItemImage);
             username = itemView.findViewById(R.id.username);
             userrole = itemView.findViewById(R.id.userrole);
-            parentLayout = itemView.findViewById(R.id.parent_layout);
+            parentLayout = itemView.findViewById(R.id.home_item_layout);
         }
     }
 
