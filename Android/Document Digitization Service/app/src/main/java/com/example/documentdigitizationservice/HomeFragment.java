@@ -63,7 +63,6 @@ public class HomeFragment extends Fragment {
     public void setLayout(View view){
 
         RecyclerView recyclerView =  view.findViewById(R.id.home_recyler_view);
-
         Context context = getActivity();
         HomeViewAdapter adapter = new HomeViewAdapter(mImageUrls, mUserNames, mUserRoles, context);
         recyclerView.setAdapter(adapter);
