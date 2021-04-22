@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Document Digitization Service</string>
+    <string name="todo" />
 </resources>

@@ -55,7 +55,7 @@ public class HomeFragment extends Fragment {
         mImageUrls.add("https://scontent.fzyl1-1.fna.fbcdn.net/v/t1.6435-9/29365773_10209418393335535_3763052488496775168_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=174925&_nc_ohc=jf-4vU67vJwAX-S6KVt&_nc_ht=scontent.fzyl1-1.fna&oh=72a9138197f4b3d77729980d475b91c8&oe=609FCB6A");
         mUserNames.add("Hasibul Hassan");
         mUserRoles.add("Developer");
-        mImageUrls.add("https://scontent.fzyl1-1.fna.fbcdn.net/v/t1.6435-9/94614491_2624999207779215_4015548479047729152_n.jpg?_nc_cat=104&ccb=1-3&_nc_sid=174925&_nc_ohc=ma3pKkLMHUEAX83OMkI&_nc_ht=scontent.fzyl1-1.fna&oh=c87d347089be0ebe7f119c6ea1f2a99d&oe=60A11804");
+        mImageUrls.add("https://scontent.fdac37-1.fna.fbcdn.net/v/t1.6435-9/126514380_2802414473371020_8451433866813751474_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=Dn2mVFk4IFAAX_dEOZh&_nc_ht=scontent.fdac37-1.fna&oh=7fcf70f1ef3e4b741b3bf23c6a76cf8e&oe=60A7C8B8");
         mUserNames.add("Ifran Rahman Nijhum");
         mUserRoles.add("Developer");
 

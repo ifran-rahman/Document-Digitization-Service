@@ -2,6 +2,7 @@ package com.example.documentdigitizationservice;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -63,6 +64,11 @@ public class HomeViewAdapter extends RecyclerView.Adapter<HomeViewAdapter.ViewHo
             public void onClick(View v) {
                 Log.d(TAG, "onClick: clicked on: " + mUserNames.get(position));
                 Toast.makeText(mContext, mUserNames.get(position), Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(mContext, ProfileActivity.class);
+                intent.putExtra("image_url",mImages.get(position));
+                intent.putExtra("name_url", mUserNames.get(position));
+                mContext.startActivity(intent);
             }
         });
     }
