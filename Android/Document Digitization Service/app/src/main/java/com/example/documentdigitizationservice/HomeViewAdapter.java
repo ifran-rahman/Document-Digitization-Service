@@ -68,6 +68,7 @@ public class HomeViewAdapter extends RecyclerView.Adapter<HomeViewAdapter.ViewHo
                 Intent intent = new Intent(mContext, ProfileActivity.class);
                 intent.putExtra("image_url",mImages.get(position));
                 intent.putExtra("name_url", mUserNames.get(position));
+                intent.putExtra("role_url",mUserRoles.get(position));
                 mContext.startActivity(intent);
             }
         });

@@ -22,23 +22,26 @@ public class ProfileActivity extends AppCompatActivity {
     }
     private void getIncomingIntent(){
         Log.d(TAG, "getIncomingIntent: checking for incoming intents.");
-        if(getIntent().hasExtra("image") && getIntent().hasExtra("name_url")){
+        if(getIntent().hasExtra("image_url") && getIntent().hasExtra("name_url") && getIntent().hasExtra("role_url")){
             Log.d(TAG, "getIncomingIntent: found intent extras.");
-            String imageUrl =getIntent().getStringExtra("image");
-            String imagename = getIntent().getStringExtra("name_url");
-            setName(imageUrl,imagename);
+            String imageUrl =getIntent().getStringExtra("image_url");
+            String imageName = getIntent().getStringExtra("name_url");
+            String roleName = getIntent().getStringExtra("role_url");
+            setName(imageUrl,imageName,roleName);
         }
 
     }
-    private void setName(String imagename, String image){
+    private void setName(String imageUrl, String imageName, String roleName){
         Log.d(TAG, "setName: setting name to widgets.");
-        TextView n = findViewById(R.id.name);
-        n.setText(imagename);
+        TextView n = findViewById(R.id.textView);
+        n.setText(imageName);
+        TextView r = findViewById(R.id.textView1);
+        r.setText(roleName);
 
-        ImageView imagev = findViewById(R.id.image1);
+        ImageView imageView = findViewById(R.id.profile_image);
         Glide.with(this)
                 .asBitmap()
-                .load(image)
-                .into(imagev);
+                .load(imageUrl)
+                .into(imageView);
     }
 }
