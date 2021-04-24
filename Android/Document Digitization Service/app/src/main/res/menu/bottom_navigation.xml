@@ -12,5 +12,4 @@
         android:id="@+id/notification_activity"
         android:icon="@drawable/ic_baseline_notifications_24"
         android:title="Notification Activity"/>
-
 </menu>

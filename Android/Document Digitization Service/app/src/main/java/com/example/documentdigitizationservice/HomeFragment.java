@@ -20,26 +20,10 @@ public class HomeFragment extends Fragment {
     private ArrayList<String> mImageUrls = new ArrayList<>();
     private ArrayList<String> mUserRoles = new ArrayList<>();
 
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-    }
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view =  inflater.inflate(R.layout.fragment_home, container, false);
-        Button button = (Button) view.findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent in = new Intent(getActivity(), ProfileActivity.class);
-                startActivity(in);
-            }
-        });
-
-
         initBitmaps();
         setLayout(view);
         return view;
