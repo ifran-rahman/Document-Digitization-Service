@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
                             selectedFragment = new HomeFragment();
                             break;
                         case R.id.folder_activity:
-                            selectedFragment = new FolderFragment();
+                            selectedFragment = new PrivateRepoFragment();
                             break;
                         case R.id.notification_activity:
                             selectedFragment = new NotificationsFragment();
