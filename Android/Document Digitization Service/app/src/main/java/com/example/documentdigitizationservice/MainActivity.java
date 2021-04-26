@@ -6,6 +6,9 @@ import androidx.fragment.app.Fragment;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.example.documentdigitizationservice.Views.Home.HomeFragment;
+import com.example.documentdigitizationservice.Views.Notifications.NotificationsFragment;
+import com.example.documentdigitizationservice.Views.PrivateRepo.PrivateRepoFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {

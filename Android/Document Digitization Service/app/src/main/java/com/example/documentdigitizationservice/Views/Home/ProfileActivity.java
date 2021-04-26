@@ -1,4 +1,4 @@
-package com.example.documentdigitizationservice;
+package com.example.documentdigitizationservice.Views.Home;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.example.documentdigitizationservice.R;
 
 public class ProfileActivity extends AppCompatActivity {
 

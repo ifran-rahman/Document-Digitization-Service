@@ -1,4 +1,4 @@
-package com.example.documentdigitizationservice;
+package com.example.documentdigitizationservice.Views.Home;
 
 
 import android.content.Context;
