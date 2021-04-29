@@ -4,6 +4,7 @@ import java.util.Date;
 
 public class File {
     private String FileName;
+    private String FileUrl;
     private Date UploadDate;
     private Date ArchiveDate;
 
@@ -11,8 +12,9 @@ public class File {
         FileName = fileName;
     }
 
-    public File(String fileName, Date uploadDate, Date archiveDate) {
+    public File(String fileName, String fileUrl, Date uploadDate, Date archiveDate) {
         FileName = fileName;
+        FileUrl = fileUrl;
         UploadDate = uploadDate;
         ArchiveDate = archiveDate;
     }
