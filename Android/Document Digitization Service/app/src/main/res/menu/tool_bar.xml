@@ -14,5 +14,9 @@
         android:icon="@drawable/ic_launcher_foreground"
         app:showAsAction="always"
         />
+    <item
+        android:title="Logout"
+        android:id="@+id/logout"
+        />
 
 </menu>
