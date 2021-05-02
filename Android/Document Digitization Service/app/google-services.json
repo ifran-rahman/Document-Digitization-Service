@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "437944247601",
+    "project_id": "document-digitization-service",
+    "storage_bucket": "document-digitization-service.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:437944247601:android:7224aa9056ff9432107c10",
+        "android_client_info": {
+          "package_name": "com.example.documentdigitizationservice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "437944247601-ks8bt0olvnhc4bnsspgjdpjh5mfiq8kp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDj7-vkZo0Jb3_tlP3S4vi6HJxtiSG_Ic"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "437944247601-ks8bt0olvnhc4bnsspgjdpjh5mfiq8kp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

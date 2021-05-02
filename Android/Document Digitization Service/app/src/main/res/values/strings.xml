@@ -2,4 +2,9 @@
     <string name="app_name">Document Digitization Service</string>
     <string name="todo" />
     <string name="textview" />
+    <string name="email">email</string>
+    <string name="admin_login">Admin Login</string>
+    <string name="password">password</string>
+    <string name="login">Login</string>
+    <string name="log_out">Log Out</string>
 </resources>
