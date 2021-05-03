@@ -30,7 +30,6 @@ public class PrivateRepoFragment extends Fragment {
     private ArrayList<File> files ;
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference databaseReference;
-    private ChildEventListener childEventListener;
     private Button mSendButton;
     private String UID;
 
@@ -56,9 +55,8 @@ public class PrivateRepoFragment extends Fragment {
             public void onClick(View view) {
                 // TODO: Send messages on click
                 File friendlyMessage = new File("File name", "url", "18130");
-                File friendlyMessage2 = new File("File name", "url", "43042");
+
                 databaseReference.child(UID).child("PublicFIles").push().setValue(friendlyMessage);
-                databaseReference.push().setValue(friendlyMessage2);
 
             }
         });
