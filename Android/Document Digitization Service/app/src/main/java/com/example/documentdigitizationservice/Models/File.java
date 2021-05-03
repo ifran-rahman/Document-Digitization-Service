@@ -1,37 +1,43 @@
 package com.example.documentdigitizationservice.Models;
 
-import java.util.Date;
 
 public class File {
-    private String FileName;
-    private String FileUrl;
-    private Date UploadDate;
-    private Date ArchiveDate;
+    private String fileurl;
+    private String name;
 
-    public File(String fileName) {
-        FileName = fileName;
+    public String getUserId() {
+        return UserId;
     }
 
-    public File(String fileName, String fileUrl, Date uploadDate, Date archiveDate) {
-        FileName = fileName;
-        FileUrl = fileUrl;
-        UploadDate = uploadDate;
-        ArchiveDate = archiveDate;
+    public void setUserId(String userId) {
+        UserId = userId;
     }
 
-    public String getFileName() {
-        return FileName;
+    private String UserId;
+
+    public File(){
+
     }
 
-    public void setFileName(String fileName) {
-        FileName = fileName;
+    public File(String fileName, String fileUrl, String userId) {
+        name = fileName;
+        fileurl = fileUrl;
+        UserId = userId;
     }
 
-    public Date getUploadDate() {
-        return UploadDate;
+    public String getFileurl() {
+        return fileurl;
     }
 
-    public void setUploadDate(Date uploadDate) {
-        UploadDate = uploadDate;
+    public void setFileurl(String fileurl) {
+        this.fileurl = fileurl;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

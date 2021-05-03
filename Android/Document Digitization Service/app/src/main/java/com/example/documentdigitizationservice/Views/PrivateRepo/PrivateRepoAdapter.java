@@ -12,19 +12,20 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.documentdigitizationservice.Models.File;
 import com.example.documentdigitizationservice.R;
 
 import java.util.ArrayList;
 
 public class PrivateRepoAdapter extends RecyclerView.Adapter {
-    private static final String TAG = "PrivateRepo dapter";
+    private static final String TAG = "PrivateRepoAdapter";
 
-    private ArrayList<String> mFolderNames;
+    private ArrayList<File> files;
     private Context mContext;
 
 
-    public PrivateRepoAdapter(ArrayList<String> mFolderNames, Context mContext) {
-        this.mFolderNames = mFolderNames;
+    public PrivateRepoAdapter(ArrayList<File> files, Context mContext) {
+        this.files = files;
         this.mContext = mContext;
     }
 
@@ -39,15 +40,14 @@ public class PrivateRepoAdapter extends RecyclerView.Adapter {
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, final int position) {
 
-        ((PrivateRepoAdapter.ViewHolder)viewHolder).username.setText(mFolderNames.get(position));
+        ((PrivateRepoAdapter.ViewHolder)viewHolder).username.setText(files.get(position).getName());
 
         ((ViewHolder) viewHolder).parentLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d(TAG, "onClick: clicked on: " + mFolderNames.get(position));
-                Toast.makeText(mContext, mFolderNames.get(position), Toast.LENGTH_SHORT).show();
-                //Intent intent = new Intent(mContext, ProfileActivity.class);
-                //mContext.startActivity(intent);
+                Log.d(TAG, "onClick: clicked on: " + files.get(position).getName());
+                Toast.makeText(mContext, files.get(position).getFileurl(), Toast.LENGTH_SHORT).show();
+
             }
         });
     }
@@ -55,7 +55,7 @@ public class PrivateRepoAdapter extends RecyclerView.Adapter {
 
     @Override
     public int getItemCount() {
-        return mFolderNames.size();
+        return files.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
