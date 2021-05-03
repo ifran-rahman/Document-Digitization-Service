@@ -49,17 +49,6 @@ public class PrivateRepoFragment extends Fragment {
         databaseReference = firebaseDatabase.getReference().child("Users");
 
         files = new ArrayList<>();
-        mSendButton = (Button)view.findViewById(R.id.sendButton);
-        mSendButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // TODO: Send messages on click
-                File friendlyMessage = new File("File name", "url", "18130");
-
-                databaseReference.child(UID).child("PublicFIles").push().setValue(friendlyMessage);
-
-            }
-        });
 
         RecyclerView recyclerView =  view.findViewById(R.id.private_repo_recyler_view);
         Context context = getActivity();
@@ -97,14 +86,14 @@ public class PrivateRepoFragment extends Fragment {
 //        files.add(f);
 //
 //    }
-    public void setLayout(View view){
-
-        RecyclerView recyclerView =  view.findViewById(R.id.private_repo_recyler_view);
-        Context context = getActivity();
-        PrivateRepoAdapter adapter = new PrivateRepoAdapter(files,context);
-        recyclerView.setAdapter(adapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(context));
-    }
+//    public void setLayout(View view){
+//
+//        RecyclerView recyclerView =  view.findViewById(R.id.private_repo_recyler_view);
+//        Context context = getActivity();
+//        PrivateRepoAdapter adapter = new PrivateRepoAdapter(files,context);
+//        recyclerView.setAdapter(adapter);
+//        recyclerView.setLayoutManager(new LinearLayoutManager(context));
+//    }
 
 
 }

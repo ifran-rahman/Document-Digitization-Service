@@ -9,12 +9,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.documentdigitizationservice.Views.Home.HomeFragment;
 import com.example.documentdigitizationservice.Views.Notifications.NotificationsFragment;
 import com.example.documentdigitizationservice.Views.PrivateRepo.PrivateRepoFragment;
+import com.example.documentdigitizationservice.Views.userprofile.UserProfile;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -27,7 +27,7 @@ public class Home extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         Toolbar toolbar = findViewById(R.id.main_toolbar);
-       setSupportActionBar(toolbar);
+        setSupportActionBar(toolbar);
         fAuth = FirebaseAuth.getInstance();
 
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
@@ -79,8 +79,9 @@ public class Home extends AppCompatActivity {
             finish();
           }
     public void userprofile(){
-        startActivity(new Intent(getApplicationContext(),UserProfile.class));
-        finish();
+
+        startActivity(new Intent(getApplicationContext(), UserProfile.class));
+        //finish();
     }
 
 
