@@ -4,21 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UserProfile">
-
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
-
-    </com.google.android.material.appbar.AppBarLayout>
+    tools:context=".Views.userprofile.UserProfile">
 
     <include layout="@layout/content_user_profile" />
 
@@ -32,5 +18,72 @@
         android:contentDescription="@string/fileUp"
         tools:ignore="VectorDrawableCompat"
         android:onClick="FileUpload"/>
+
+<!--    <androidx.appcompat.widget.LinearLayoutCompat-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical">-->
+<!--        <RelativeLayout-->
+<!--            android:id="@+id/linear1"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="#12183C">-->
+
+<!--            <de.hdodenhof.circleimageview.CircleImageView-->
+<!--                android:id="@+id/profile_image"-->
+<!--                android:layout_width="200dp"-->
+<!--                android:layout_height="200dp"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:layout_marginTop="40dp"-->
+<!--                android:layout_marginBottom="40dp"-->
+<!--                android:baselineAlignBottom="true"-->
+<!--                android:src="@drawable/ic_launcher_foreground"-->
+<!--                app:civ_border_color="#FFF9F9"-->
+<!--                app:civ_border_width="5dp" />-->
+
+
+<!--        </RelativeLayout>-->
+
+        <RelativeLayout
+            android:layout_below="@+id/linear1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+<!--            <TextView-->
+<!--                android:id="@+id/textView"-->
+<!--                android:drawableLeft="@drawable/ic_baseline_account_box_24"-->
+<!--                android:layout_width="300dp"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:layout_marginTop="50dp"-->
+<!--                android:gravity="center"-->
+<!--                android:text="Name"-->
+<!--                android:textColor="@color/colorAccent"-->
+<!--                android:textSize="20sp"-->
+<!--                tools:text="Name" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/textView1"-->
+<!--                android:layout_width="300dp"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:layout_below="@+id/textView"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:gravity="center"-->
+<!--                android:text="@string/textview"-->
+<!--                android:textColor="@color/colorAccent"-->
+<!--                android:textSize="20sp"-->
+<!--                />-->
+
+<!--        </RelativeLayout>-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/user_profile_recyler_view">
+        </androidx.recyclerview.widget.RecyclerView>
+        </RelativeLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

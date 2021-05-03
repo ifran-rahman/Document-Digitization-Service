@@ -1,46 +1,88 @@
-package com.example.documentdigitizationservice;
+package com.example.documentdigitizationservice.Views.userprofile;
 
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
+import com.example.documentdigitizationservice.FirebaseQueries;
 import com.example.documentdigitizationservice.Models.File;
+import com.example.documentdigitizationservice.R;
+import com.example.documentdigitizationservice.Views.PrivateRepo.PrivateRepoAdapter;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import java.util.HashMap;
+import java.util.ArrayList;
 
 public class UserProfile extends AppCompatActivity {
-
+    private ArrayList<File> files ;
+    private FirebaseDatabase firebaseDatabase;
+    private String UID;
     private static final int PICK_FILE = 1;
     private DatabaseReference databaseReference;
-    private String UID;
+
     private static String  TAG = "UserProfileActivity";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_profile);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        UID = FirebaseQueries.getInstance().getUID();
-        Log.d(TAG, UID);
 
-        databaseReference = FirebaseDatabase.getInstance().getReference().child("Users");
+        UID = FirebaseQueries.getInstance().getUID();
+
+        databaseReference = FirebaseDatabase.getInstance().getReference().child("Users").child(UID).child("PublicFiles");
+
+        files = new ArrayList<>();
+//
+//        File friendlyMessage = new File("File name", "url", "18130");
+//        File friendlyMessage2 = new File("File name", "url", "43042");
+//        files.add(friendlyMessage);
+//        files.add(friendlyMessage2);
+
+        RecyclerView recyclerView =  findViewById(R.id.user_profile_recyler_view);
+        Context context = getApplicationContext();
+        final PublicFilesAdapter adapter = new PublicFilesAdapter(files,context);
+        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(context));
+
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for(DataSnapshot dataSnapshot: snapshot.getChildren()){
+                    File file = dataSnapshot.getValue(File.class);
+                    files.add(file);
+                }
+                adapter.notifyDataSetChanged();
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+
+
 
     }
     public void FileUpload(View view){
