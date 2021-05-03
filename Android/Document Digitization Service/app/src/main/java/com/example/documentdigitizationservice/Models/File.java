@@ -1,7 +1,16 @@
 package com.example.documentdigitizationservice.Models;
-
-
 public class File {
+
+    public File(){
+
+    }
+
+    public File(String fileName, String fileUrl, String userId) {
+        name = fileName;
+        fileurl = fileUrl;
+        UserId = userId;
+    }
+
     private String fileurl;
     private String name;
 
@@ -14,17 +23,6 @@ public class File {
     }
 
     private String UserId;
-
-    public File(){
-
-    }
-
-    public File(String fileName, String fileUrl, String userId) {
-        name = fileName;
-        fileurl = fileUrl;
-        UserId = userId;
-    }
-
     public String getFileurl() {
         return fileurl;
     }
