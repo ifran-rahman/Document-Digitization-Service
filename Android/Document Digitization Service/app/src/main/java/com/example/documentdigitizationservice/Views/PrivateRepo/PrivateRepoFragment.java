@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.documentdigitizationservice.Models.File;
 import com.example.documentdigitizationservice.R;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -31,21 +32,24 @@ public class PrivateRepoFragment extends Fragment {
     private DatabaseReference databaseReference;
     private ChildEventListener childEventListener;
     private Button mSendButton;
+    private String UID;
 
+    private FirebaseAuth fAuth;
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
     }
+
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view =  inflater.inflate(R.layout.fragment_private_repo, container, false);
         firebaseDatabase = FirebaseDatabase.getInstance();
-        databaseReference = firebaseDatabase.getReference().child("PrivateFiles");
+        databaseReference = firebaseDatabase.getReference().child("Users");
 
         files = new ArrayList<>();
-
         mSendButton = (Button)view.findViewById(R.id.sendButton);
         mSendButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,7 +57,7 @@ public class PrivateRepoFragment extends Fragment {
                 // TODO: Send messages on click
                 File friendlyMessage = new File("File name", "url", "18130");
                 File friendlyMessage2 = new File("File name", "url", "43042");
-                databaseReference.push().setValue(friendlyMessage);
+                databaseReference.child(UID).child("PublicFIles").push().setValue(friendlyMessage);
                 databaseReference.push().setValue(friendlyMessage2);
 
             }
@@ -85,7 +89,7 @@ public class PrivateRepoFragment extends Fragment {
 
         return view;
     }
-//
+    //
 //    public void initBitmaps(){
 //        File f = new File("file 4", "55555555555555");
 //        files.add(f);

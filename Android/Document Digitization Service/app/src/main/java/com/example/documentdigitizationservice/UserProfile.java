@@ -33,7 +33,6 @@ public class UserProfile extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
         databaseReference = FirebaseDatabase.getInstance().getReference().child("User");
 
     }
