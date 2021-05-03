@@ -9,7 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.documentdigitizationservice.Views.Home.HomeFragment;
@@ -25,6 +25,7 @@ public class Home extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
         Toolbar toolbar = findViewById(R.id.main_toolbar);
        setSupportActionBar(toolbar);
         fAuth = FirebaseAuth.getInstance();
@@ -77,13 +78,17 @@ public class Home extends AppCompatActivity {
             startActivity(new Intent(getApplicationContext(),MainActivity.class));
             finish();
           }
+    public void userprofile(){
+        startActivity(new Intent(getApplicationContext(),UserProfile.class));
+        finish();
+    }
 
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
-            case R.id.item1:
-              Toast.makeText(Home.this,"Item 1 clicked",Toast.LENGTH_SHORT).show();
+            case R.id.userProfile:
+              userprofile();
                 break;
             case R.id.item2:
              Toast.makeText(Home.this,"Item 2 clicked",Toast.LENGTH_SHORT).show();
