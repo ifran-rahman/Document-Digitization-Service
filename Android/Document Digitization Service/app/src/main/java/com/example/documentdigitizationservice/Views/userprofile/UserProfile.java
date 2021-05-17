@@ -110,7 +110,8 @@ public class UserProfile extends AppCompatActivity {
                              String URL = String.valueOf(uri);
                              String filename =   uri.getLastPathSegment();
                              File file = new File(filename, URL, UID);
-                             databaseReference.child(UID).child("PublicFiles").push().setValue(file);
+                             DatabaseReference db  = FirebaseDatabase.getInstance().getReference().child("Users").child(UID).child("PublicFiles");
+                             db.push().setValue(file);
                              Toast.makeText(UserProfile.this,"File Uploaded", Toast.LENGTH_SHORT).show();
                          }
                      });
