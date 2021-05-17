@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.os.Bundle;
 
 import com.example.documentdigitizationservice.FirebaseQueries;
+import com.example.documentdigitizationservice.Models.Employee;
 import com.example.documentdigitizationservice.Models.File;
 import com.example.documentdigitizationservice.R;
 import com.example.documentdigitizationservice.Views.PrivateRepo.PrivateRepoAdapter;
