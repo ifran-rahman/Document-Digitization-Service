@@ -43,7 +43,7 @@ public class ProfileActivity extends AppCompatActivity {
         getIncomingIntent();
 
 
-        UID = FirebaseQueries.getInstance().getUID();
+       // UID = FirebaseQueries.getInstance().getUID();
 
         databaseReference = FirebaseDatabase.getInstance().getReference().child("Users").child(UID).child("PublicFiles");
 
@@ -84,7 +84,7 @@ public class ProfileActivity extends AppCompatActivity {
             String imageUrl =getIntent().getStringExtra("image_url");
             String imageName = getIntent().getStringExtra("name_url");
             String roleName = getIntent().getStringExtra("role_url");
-            String UID =  getIntent().getStringExtra("UID");
+            UID =  getIntent().getStringExtra("UID");
             setName(imageUrl,imageName,roleName);
         }
 
