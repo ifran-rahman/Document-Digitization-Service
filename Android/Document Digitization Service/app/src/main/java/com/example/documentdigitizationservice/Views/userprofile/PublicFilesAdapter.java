@@ -1,6 +1,8 @@
 package com.example.documentdigitizationservice.Views.userprofile;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -44,7 +46,10 @@ public class PublicFilesAdapter extends RecyclerView.Adapter<PublicFilesAdapter.
             @Override
             public void onClick(View v) {
                 Log.d(TAG, "onClick: clicked on: " + files.get(position).getName());
-                Toast.makeText(mContext, files.get(position).getFileurl(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext, "File is opening", Toast.LENGTH_SHORT).show();
+                Intent implicit = new Intent(Intent.ACTION_VIEW, Uri.parse(files.get(position).getFileurl()));
+                implicit.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                mContext.startActivity(implicit);
             }
         });
     }
