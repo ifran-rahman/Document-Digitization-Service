@@ -53,10 +53,8 @@ public class HomeFragment extends Fragment {
                   Employee employee = dataSnapshot.getValue(Employee.class);
                     list.add(employee);
 
-
                 }
                 homeViewAdapter.notifyDataSetChanged();
-
             }
 
             @Override
@@ -65,15 +63,7 @@ public class HomeFragment extends Fragment {
             }
         });
 
-
-
-
         return view;
     }
-
-
-
-
-
 
 }

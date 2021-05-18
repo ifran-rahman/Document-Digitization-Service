@@ -28,6 +28,7 @@ public class ProfileActivity extends AppCompatActivity {
             String imageUrl =getIntent().getStringExtra("image_url");
             String imageName = getIntent().getStringExtra("name_url");
             String roleName = getIntent().getStringExtra("role_url");
+            String UID =  getIntent().getStringExtra("UID");
             setName(imageUrl,imageName,roleName);
         }
 
