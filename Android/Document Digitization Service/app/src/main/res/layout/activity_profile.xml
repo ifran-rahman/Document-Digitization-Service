@@ -29,21 +29,23 @@
     </RelativeLayout>
 
     <RelativeLayout
-        android:layout_below="@+id/linear1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@+id/linear1"
+        android:background="#4DBCF5FB"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/textView"
-            android:drawableLeft="@drawable/ic_baseline_account_box_24"
             android:layout_width="300dp"
             android:layout_height="40dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="50dp"
+            android:background="#FFFFFF"
+            android:drawableLeft="@drawable/ic_baseline_account_box_24"
             android:gravity="center"
             android:text="Name"
-            android:textColor="@color/colorAccent"
+            android:textColor="@color/design_default_color_on_secondary"
             android:textSize="20sp"
             tools:text="Name" />
 
@@ -54,11 +56,13 @@
             android:layout_below="@+id/textView"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="5dp"
+            android:background="#FFFFFF"
+
+            android:drawableLeft="@drawable/ic_baseline_account_box_24"
             android:gravity="center"
-            android:text="@string/textview"
-            android:textColor="@color/colorAccent"
-            android:textSize="20sp"
-            />
+            android:text="Role"
+            android:textColor="@color/design_default_color_on_secondary"
+            android:textSize="20sp" />
 
     </RelativeLayout>
 
