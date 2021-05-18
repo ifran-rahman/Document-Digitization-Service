@@ -36,6 +36,7 @@ public class Home extends AppCompatActivity {
                 new HomeFragment()).commit();
     }
 
+    // Fragment switching
     private BottomNavigationView.OnNavigationItemSelectedListener navListner =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
                 @Override
@@ -79,6 +80,7 @@ public class Home extends AppCompatActivity {
     }
 
 
+    // Toolbar item switch
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){

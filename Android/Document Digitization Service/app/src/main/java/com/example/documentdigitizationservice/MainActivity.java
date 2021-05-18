@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         mPassword = findViewById(R.id.password);
         mLoginBtn = findViewById(R.id.loginbutton);
 
+        //Log in
         mAuthStateListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {

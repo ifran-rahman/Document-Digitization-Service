@@ -49,6 +49,7 @@ public class ProfileActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(context));
 
+        //Fetch file list from firebase
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -66,6 +67,8 @@ public class ProfileActivity extends AppCompatActivity {
             }
         });
     }
+
+    //Get incoming intent
     private void getIncomingIntent(){
         Log.d(TAG, "getIncomingIntent: checking for incoming intents.");
         if(getIntent().hasExtra("image_url") && getIntent().hasExtra("name_url") && getIntent().hasExtra("UID")&& getIntent().hasExtra("role_url")){
@@ -78,6 +81,7 @@ public class ProfileActivity extends AppCompatActivity {
         }
 
     }
+    //setting user data to widgets
     private void setName(String imageUrl, String imageName, String roleName){
         Log.d(TAG, "setName: setting name to widgets.");
         TextView n = findViewById(R.id.textView);

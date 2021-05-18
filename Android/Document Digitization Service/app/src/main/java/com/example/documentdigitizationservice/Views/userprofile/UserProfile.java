@@ -59,6 +59,7 @@ public class UserProfile extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(context));
 
+        //Fetch public file list from firebase
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -80,11 +81,13 @@ public class UserProfile extends AppCompatActivity {
 
 
     }
+    //Pick file from device and upload file
     public void FileUpload(View view){
         Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
         intent.setType("*/*");
         startActivityForResult(intent,PICK_FILE);
     }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {

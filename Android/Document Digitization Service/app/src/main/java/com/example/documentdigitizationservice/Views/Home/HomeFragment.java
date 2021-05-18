@@ -39,11 +39,8 @@ public class HomeFragment extends Fragment {
         list = new ArrayList<>();
         homeViewAdapter = new HomeViewAdapter(getActivity(),list);
         recyclerView.setAdapter(homeViewAdapter);
-        list = new ArrayList<>();
-        homeViewAdapter = new HomeViewAdapter(getActivity(),list);
-        recyclerView.setAdapter(homeViewAdapter);
 
-
+        //Fetch assigned public folder list from firebase
         database.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {

@@ -58,12 +58,12 @@ public class HomeViewAdapter extends RecyclerView.Adapter<HomeViewAdapter.MyView
         holder.parent_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, ProfileActivity.class);
-                intent.putExtra("image_url", employee.getAvatar());
-                intent.putExtra("name_url", employee.getName());
-                intent.putExtra("role_url", employee.getRole());
-                intent.putExtra("UID", employee.getUID());
-                                context.startActivity(intent);
+        Intent intent = new Intent(context, ProfileActivity.class);
+        intent.putExtra("image_url", employee.getAvatar());
+        intent.putExtra("name_url", employee.getName());
+        intent.putExtra("role_url", employee.getRole());
+        intent.putExtra("UID", employee.getUID());
+        context.startActivity(intent);
 
                             }
         });
