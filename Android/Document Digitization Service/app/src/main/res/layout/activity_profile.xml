@@ -65,8 +65,21 @@
             android:textColor="@color/design_default_color_on_secondary"
             android:textSize="20sp" />
 
-        <androidx.recyclerview.widget.RecyclerView 
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
             android:layout_below="@+id/textView1"
+            android:layout_marginTop="20dp"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:text="Uploaded Files"
+            android:textColor="#050B30"
+            android:textSize="30dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_below="@+id/textView3"
+
             android:layout_marginTop="20dp"
             android:layout_marginLeft="20dp"
             android:layout_width="match_parent"
