@@ -45,7 +45,6 @@ public class PublicFilesAdapter extends RecyclerView.Adapter<PublicFilesAdapter.
             public void onClick(View v) {
                 Log.d(TAG, "onClick: clicked on: " + files.get(position).getName());
                 Toast.makeText(mContext, files.get(position).getFileurl(), Toast.LENGTH_SHORT).show();
-
             }
         });
     }
