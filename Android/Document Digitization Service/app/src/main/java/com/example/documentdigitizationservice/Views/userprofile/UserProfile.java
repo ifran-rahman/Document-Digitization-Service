@@ -52,11 +52,6 @@ public class UserProfile extends AppCompatActivity {
 
         databaseReference = FirebaseDatabase.getInstance().getReference().child("Users").child(UID).child("PublicFiles");
         files = new ArrayList<>();
-//
-//        File friendlyMessage = new File("File name", "url", "18130");
-//        File friendlyMessage2 = new File("File name", "url", "43042");
-//        files.add(friendlyMessage);
-//        files.add(friendlyMessage2);
 
         RecyclerView recyclerView =  findViewById(R.id.user_profile_recyler_view);
         Context context = getApplicationContext();
@@ -121,18 +116,6 @@ public class UserProfile extends AppCompatActivity {
         }
     }
 
-//    mSendButton = (Button)view.findViewById(R.id.sendButton);
-//        mSendButton.setOnClickListener(new View.OnClickListener() {
-//        @Override
-//        public void onClick(View view) {
-//            // TODO: Send messages on click
-//            File friendlyMessage = new File("File name", "url", "18130");
-//            File friendlyMessage2 = new File("File name", "url", "43042");
-//            databaseReference.child(UID).child("PublicFiles").push().setValue(friendlyMessage);
-//            databaseReference.child(UID).child("PublicFiles").push().setValue(friendlyMessage2);
-//
-//        }
-//    });
 
 
 }

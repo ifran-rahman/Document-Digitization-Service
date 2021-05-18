@@ -64,6 +64,7 @@ public class HomeViewAdapter extends RecyclerView.Adapter<HomeViewAdapter.MyView
                 intent.putExtra("role_url", employee.getRole());
                 intent.putExtra("UID", employee.getUID());
                                 context.startActivity(intent);
+
                             }
         });
 

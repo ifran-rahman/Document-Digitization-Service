@@ -1,6 +1,7 @@
 package com.example.documentdigitizationservice;
 
 public class FirebaseQueries {
+    //Singleton class to access user data from everywher
 
     private static FirebaseQueries instance;
 

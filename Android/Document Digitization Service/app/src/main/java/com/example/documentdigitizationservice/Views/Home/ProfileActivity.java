@@ -36,23 +36,12 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-
-
-
         Log.d(TAG, "onCreate: started.");
         getIncomingIntent();
-
-
-       // UID = FirebaseQueries.getInstance().getUID();
 
         databaseReference = FirebaseDatabase.getInstance().getReference().child("Users").child(UID).child("PublicFiles");
 
         files = new ArrayList<>();
-//
-//        File friendlyMessage = new File("File name", "url", "18130");
-//        File friendlyMessage2 = new File("File name", "url", "43042");
-//        files.add(friendlyMessage);
-//        files.add(friendlyMessage2);
 
         RecyclerView recyclerView =  findViewById(R.id.user_profile_recyler_view);
         Context context = getApplicationContext();

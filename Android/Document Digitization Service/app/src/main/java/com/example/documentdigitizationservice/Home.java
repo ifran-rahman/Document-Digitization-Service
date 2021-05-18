@@ -60,12 +60,6 @@ public class Home extends AppCompatActivity {
                 }
             };
 
-//    @Override
-//    public void onBackPressed() {
-//        Intent intent = new Intent(Intent.ACTION_MAIN);
-//        intent.addCategory(Intent.CATEGORY_HOME);
-//        startActivity(intent);
-//    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -81,7 +75,7 @@ public class Home extends AppCompatActivity {
     public void userprofile(){
 
         startActivity(new Intent(getApplicationContext(), UserProfile.class));
-        //finish();
+
     }
 
 

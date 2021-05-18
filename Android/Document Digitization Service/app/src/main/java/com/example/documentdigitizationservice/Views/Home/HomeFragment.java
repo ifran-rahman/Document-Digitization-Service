@@ -1,5 +1,5 @@
 package com.example.documentdigitizationservice.Views.Home;
-import android.content.Context;
+
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,13 +12,12 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.documentdigitizationservice.Models.Employee;
+import com.example.documentdigitizationservice.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
-import com.example.documentdigitizationservice.R;
 
 import java.util.ArrayList;
 
@@ -43,6 +42,7 @@ public class HomeFragment extends Fragment {
         list = new ArrayList<>();
         homeViewAdapter = new HomeViewAdapter(getActivity(),list);
         recyclerView.setAdapter(homeViewAdapter);
+
 
         database.addValueEventListener(new ValueEventListener() {
             @Override
