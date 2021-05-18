@@ -79,7 +79,7 @@ public class ProfileActivity extends AppCompatActivity {
     }
     private void getIncomingIntent(){
         Log.d(TAG, "getIncomingIntent: checking for incoming intents.");
-        if(getIntent().hasExtra("image_url") && getIntent().hasExtra("name_url") && getIntent().hasExtra("role_url")){
+        if(getIntent().hasExtra("image_url") && getIntent().hasExtra("name_url") && getIntent().hasExtra("UID")&& getIntent().hasExtra("role_url")){
             Log.d(TAG, "getIncomingIntent: found intent extras.");
             String imageUrl =getIntent().getStringExtra("image_url");
             String imageName = getIntent().getStringExtra("name_url");

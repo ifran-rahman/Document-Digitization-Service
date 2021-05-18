@@ -51,7 +51,6 @@ public class UserProfile extends AppCompatActivity {
         UID = FirebaseQueries.getInstance().getUID();
 
         databaseReference = FirebaseDatabase.getInstance().getReference().child("Users").child(UID).child("PublicFiles");
-
         files = new ArrayList<>();
 //
 //        File friendlyMessage = new File("File name", "url", "18130");
