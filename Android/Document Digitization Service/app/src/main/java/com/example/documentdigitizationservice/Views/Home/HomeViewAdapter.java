@@ -15,84 +15,67 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.documentdigitizationservice.Models.Employee;
 import com.example.documentdigitizationservice.R;
 
 
 import java.util.ArrayList;
+import java.util.EmptyStackException;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class HomeViewAdapter extends RecyclerView.Adapter<HomeViewAdapter.ViewHolder>{
+public class HomeViewAdapter extends RecyclerView.Adapter<HomeViewAdapter.MyViewHolder>{
 
     private static final String TAG = "RecyclerviewAdapter";
 
-    private ArrayList<String> mImages = new ArrayList<>();
-    private ArrayList<String> mUserNames = new ArrayList<>();
-    private ArrayList<String> mUserRoles = new ArrayList<>();
-    private Context mContext;
+    Context context;
 
-    public HomeViewAdapter(ArrayList<String> mImages, ArrayList<String> mUserNames, ArrayList<String> mUserRoles, Context mContext) {
-        this.mImages = mImages;
-        this.mUserNames = mUserNames;
-        this.mUserRoles = mUserRoles;
-        this.mContext = mContext;
+    ArrayList<Employee> list;
+
+
+    public HomeViewAdapter(Context context, ArrayList<Employee> list) {
+        this.context = context;
+        this.list = list;
+
     }
 
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.home_item, parent, false);
-        ViewHolder vh = new ViewHolder(view);
-        return vh;
+    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View v = LayoutInflater.from(context).inflate(R.layout.home_item,parent,false);
+        return  new MyViewHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder viewHolder, final int position) {
+    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
-        Glide.with(mContext)
-                .asBitmap()
-                .load(mImages.get(position))
-                .into(viewHolder.image);
-        Log.d(TAG, "onBindviewholder");
+        Employee employee = list.get(position);
+        holder.Name.setText(employee.getName());
+        holder.Role.setText(employee.getRole());
+        holder.Avatar.setText(employee.getAvatar());
 
-        // Set the name of the 'user'
-        ((ViewHolder)viewHolder).username.setText(mUserNames.get(position));
-        ((ViewHolder)viewHolder).userrole.setText(mUserRoles.get(position));
 
-        viewHolder.parentLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.d(TAG, "onClick: clicked on: " + mUserNames.get(position));
-                Toast.makeText(mContext, mUserNames.get(position), Toast.LENGTH_SHORT).show();
-
-                Intent intent = new Intent(mContext, ProfileActivity.class);
-                intent.putExtra("image_url",mImages.get(position));
-                intent.putExtra("name_url", mUserNames.get(position));
-                intent.putExtra("role_url",mUserRoles.get(position));
-                mContext.startActivity(intent);
-            }
-        });
     }
 
     @Override
     public int getItemCount() {
-        return mUserNames.size();
+        return list.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
-        CircleImageView image;
-        TextView username;
-        TextView userrole;
-        RelativeLayout parentLayout;
+    public static class MyViewHolder extends RecyclerView.ViewHolder{
 
-        public ViewHolder(@NonNull View itemView) {
+        TextView Name, Role, Avatar;
+
+        public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            image = itemView.findViewById(R.id.HomeItemImage);
-            username = itemView.findViewById(R.id.username);
-            userrole = itemView.findViewById(R.id.userrole);
-            parentLayout = itemView.findViewById(R.id.home_item_layout);
-        }
-    }
 
+            Name = itemView.findViewById(R.id.name);
+            Role= itemView.findViewById(R.id.role);
+            Avatar = itemView.findViewById(R.id.avatar);
+
+        }
+
+
+    }
 
 }
