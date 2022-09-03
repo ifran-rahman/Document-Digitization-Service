@@ -9,8 +9,7 @@ Users can signup/log-in using their email. Upon login an user views the home pag
 
 ## **Contributors**<br />
 
-[![](https://github.com/MoshfiqueUddin?size=50)](https://github.com/MoshfiqueUddin)
+[![](https://github.com/MoshfiqueUddin.png?size=50)](https://github.com/MoshfiqueUddin)
 [![](https://github.com/ifran-rahman.png?size=50)](https://github.com/ifran-rahman)
 [![](https://github.com/Anan-Ghosh.png?size=50)](https://github.com/Anan-Ghosh)
 [![](https://github.com/Spectre118.png?size=50)](https://github.com/Spectre118)
-
